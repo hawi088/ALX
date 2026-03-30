@@ -1,0 +1,5 @@
+Room Type,Count,Base Rate,High Season Rate,Low Season Rate,Notes,Room Type,Count
+Standard,25,"2,500","3,000","2,100","Most common, shows bulk of your inventory",Standard,3587.5
+Deluxe,15,"4,000","4,800","3,400","Mid-tier, shows premium pricing strategy",Deluxe,5792.5
+Suite,10,"7,000","8,400","5,900","High-end, shows luxury segment optimization",Suite,10095
+Total,50,,,,Matches total rooms in main data sheet,Total,51
