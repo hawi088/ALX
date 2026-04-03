@@ -224,3 +224,16 @@ def generate_forecast(df):
 def get_demo_ai_insights(df, events_df=None, room_df=None):
     """Demo version that always works without API key"""
     return get_ai_insights(df, events_df, room_df, use_real_ai=False)
+def calculate_revenue_impact(current_rate, new_rate, occupancy, total_rooms):
+    current_rooms_sold = occupancy * total_rooms
+    
+    # Assume slight drop when price increases
+    if new_rate > current_rate:
+        new_rooms_sold = current_rooms_sold * 0.95
+    else:
+        new_rooms_sold = current_rooms_sold * 1.05
+
+    current_revenue = current_rooms_sold * current_rate
+    new_revenue = new_rooms_sold * new_rate
+
+    return new_revenue - current_revenue

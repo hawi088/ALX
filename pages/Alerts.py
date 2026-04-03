@@ -92,15 +92,16 @@ if daily_data is not None and not daily_data.empty:
         
         # Auto-refresh option
         st.markdown("---")
-        if st.button("🔄 Refresh Alerts"):
+        if st.button("🔄 Refresh Alerts", use_container_width=True):
             st.rerun()
     
     else:
         st.success("✅ No alerts at this time. All systems optimal!")
-        st.balloons()
+        # REMOVED: st.balloons()
 
 else:
-    st.error("No data available. Please check your data files.")
+    st.error("❌ No data available. Please check your data files.")
+    st.info("Make sure daily_data.csv exists in the 'data' folder")
 
 st.markdown("---")
 st.caption("RevMax Alert System - 24/7 Monitoring")
